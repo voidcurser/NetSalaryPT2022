@@ -20,9 +20,11 @@ namespace NetSalaryPT
     /// </summary>
     public partial class MainWindow : Window
     {
+        ResultWindow win;
         public MainWindow()
         {
             InitializeComponent();
+            win = new ResultWindow();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,7 +59,12 @@ namespace NetSalaryPT
             res += salarioDescontado + ajudaC;
             var toPrint = Math.Round(res, 2);
             var anual = (salarioDescontado * 14) + (subsidioRef * 22 * int.Parse(RefX.Text)) + (ajudaC * int.Parse(acX.Text));
-            MessageBox.Show("Por mes: " + toPrint.ToString() + "€" + "\nPor ano: " + anual.ToString("") + "€");// valor mensal
+            //MessageBox.Show("Por mes: " + toPrint.ToString() + "€" + "\nPor ano: " + anual.ToString("") + "€");// valor mensal
+            //NetSalaryPT.ResultWindow
+            //this.Visibility = Visibility.Hidden;
+            win = new ResultWindow();
+            win.Mensal.Text = Math.Round(salarioBruto, 2).ToString()+"€";
+            win.Show();
         }
     }
 }

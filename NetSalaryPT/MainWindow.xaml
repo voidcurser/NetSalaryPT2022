@@ -12,9 +12,8 @@
         <Button Content="Calcular" HorizontalAlignment="Left" Margin="343,194,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="15,15,0,0" TextWrapping="Wrap" Text="Salario Base:" VerticalAlignment="Top" Width="80" Height="26"/>
         <TextBox HorizontalAlignment="Left" Margin="122,13,0,0" TextWrapping="Wrap" Text="0" Name="baseSalary" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="15,72,0,0" TextWrapping="Wrap" Text="Ajudas de custos
-" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="122,69,0,0" TextWrapping="Wrap" Text="0" Name="AjudaCustos" VerticalAlignment="Top" Width="120" TextChanged="AjudaCustos_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,72,0,0" TextWrapping="Wrap" Text="Ajudas de custos" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="122,69,0,0" TextWrapping="Wrap" Text="0" Name="AjudaCustos" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="262,69,0,0" TextWrapping="Wrap" Name="acX" Text="11" VerticalAlignment="Top" Width="30" Height="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="292,68,0,0" TextWrapping="Wrap" Text="/Ano" VerticalAlignment="Top" Height="21"/>
         <TextBlock HorizontalAlignment="Left" Margin="17,121,0,0" TextWrapping="Wrap" Text="Alimentaçao" VerticalAlignment="Top"/>
@@ -30,7 +29,6 @@
             <ComboBoxItem>5</ComboBoxItem>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="288,13,0,0" TextWrapping="Wrap" Text="Nº dependentes:" VerticalAlignment="Top" Width="105" Height="26"/>
-
     </Grid>
 
 

@@ -19,3 +19,5 @@ C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\
 C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\ref\NetSalaryPT.dll
 C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\NetSalaryPT.pdb
 C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\NetSalaryPT.genruntimeconfig.cache
+C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\ResultWindow.g.cs
+C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\obj\Debug\net6.0-windows\ResultWindow.baml
