@@ -7,20 +7,21 @@
         mc:Ignorable="d"
         Title="ResultWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="13,12,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase" Text="Ordenado Base:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="108,13,0,0" TextWrapping="Wrap" Name="Mensal" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="16,31,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy" Text="IRS(%)" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="14,54,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy1" Text="Segurança Social(%)" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="16,78,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy2" Text="IRS" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="19,99,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy3" Text="Segurança Social" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="16,123,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy4" Text="Subsidio Alimentaçao" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="18,143,0,0" TextWrapping="Wrap" x:Name="OrdenadoBase_Copy5" Text="Ajudas de Custos" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="127,32,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="141,54,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy1" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="144,76,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy2" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="150,100,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy3" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="155,123,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy4" Text="0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="162,146,0,0" TextWrapping="Wrap" x:Name="Mensal_Copy5" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="13,12,0,0" TextWrapping="Wrap" Text="Salario Base:" VerticalAlignment="Top"/>
+        <TextBlock Name="grossSalary" HorizontalAlignment="Left" Margin="108,13,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,31,0,0" TextWrapping="Wrap" Text="IRS(%)" VerticalAlignment="Top"/>
+        <TextBlock Name="irsPercentage" HorizontalAlignment="Left" Margin="127,32,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,54,0,0" TextWrapping="Wrap" Text="Segurança Social(%)" VerticalAlignment="Top"/>
+        <TextBlock Name="socialSecurityPercentage" HorizontalAlignment="Left" Margin="141,54,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,78,0,0" TextWrapping="Wrap" Text="IRS" VerticalAlignment="Top"/>
+        <TextBlock Name="irs" HorizontalAlignment="Left" Margin="144,76,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,99,0,0" TextWrapping="Wrap" Text="Segurança Social" VerticalAlignment="Top"/>
+        <TextBlock Name="socialSecurity" HorizontalAlignment="Left" Margin="150,100,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,123,0,0" TextWrapping="Wrap" Text="Subsidio Alimentaçao" VerticalAlignment="Top"/>
+        <TextBlock Name="foodAllowance" HorizontalAlignment="Left" Margin="155,123,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,143,0,0" TextWrapping="Wrap" Text="Ajudas de Custos" VerticalAlignment="Top"/>
+        <TextBlock Name="helpAllowance" HorizontalAlignment="Left" Margin="162,146,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <DataGrid Height="200" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top" RowHeight="30" ColumnWidth="100"  Margin="18,189,0,0" Name="AnualTable"/>
 
     </Grid>
 </Window>

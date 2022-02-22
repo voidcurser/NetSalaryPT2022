@@ -20,50 +20,50 @@ namespace NetSalaryPT
     /// </summary>
     public partial class MainWindow : Window
     {
-        ResultWindow win;
+        const decimal FoodAllowanceMoneyValue = 4.77m;//valor que noa e sujeito a descontos no ordenado
+        const decimal SocialSecurityDiscount = 11m;
         public MainWindow()
         {
             InitializeComponent();
-            win = new ResultWindow();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var salarioBruto = decimal.Parse(baseSalary.Text);
-            var res = 0m;
-            var subsidioRef = 0m;
-            var ajudaC = decimal.Parse(AjudaCustos.Text);
-            if (renum.IsChecked == true)
+            var gross_Salary = decimal.Parse(GrossSalary.Text);
+            var food_Allowance = 0m;
+            var help_allowance = decimal.Parse(HelpAllowance.Text);
+            if (FoodMoney.IsChecked == true)
             {
-                subsidioRef = decimal.Parse(subAlim.Text);
-                var diff = 0m;
-                if (subsidioRef > 4.77m)
+                food_Allowance = decimal.Parse(FoodAllowance.Text);
+                var difference = 0m;
+                if (food_Allowance > FoodAllowanceMoneyValue)
                 {
-                    diff = subsidioRef - 4.77m;
+                    difference = food_Allowance - FoodAllowanceMoneyValue;
+                    food_Allowance = FoodAllowanceMoneyValue;
                 }
-                salarioBruto += (diff * 22);
-                res += subsidioRef > 0 ? (4.77m * 22) : 0;
+                gross_Salary += (difference * 22);
 
             }
-            else if (carRef.IsChecked == true)
+            else if (FoodCard.IsChecked == true)
             {
-                subsidioRef = decimal.Parse(subAlim.Text);
-                res += (subsidioRef * 22);
+                food_Allowance = decimal.Parse(FoodAllowance.Text);
             }
             var ttd = new TabelaTrabalhoDependente();
-            var depend = int.Parse(dependentes.Text);
-            var perc = ttd.PercetagemRetençaoNaFonte(salarioBruto, depend);
-            var retencao = salarioBruto * ((perc) / 100);
-            var ss = salarioBruto * (11m / 100);
-            var salarioDescontado = salarioBruto - (int)retencao - ss;
-            res += salarioDescontado + ajudaC;
-            var toPrint = Math.Round(res, 2);
-            var anual = (salarioDescontado * 14) + (subsidioRef * 22 * int.Parse(RefX.Text)) + (ajudaC * int.Parse(acX.Text));
-            //MessageBox.Show("Por mes: " + toPrint.ToString() + "€" + "\nPor ano: " + anual.ToString("") + "€");// valor mensal
-            //NetSalaryPT.ResultWindow
-            //this.Visibility = Visibility.Hidden;
-            win = new ResultWindow();
-            win.Mensal.Text = Math.Round(salarioBruto, 2).ToString()+"€";
+            var number_Of_Dependents = int.Parse(Dependents.Text);
+            var irs_Percentage = ttd.PercetagemRetençaoNaFonte(gross_Salary, number_Of_Dependents);
+            var irs_Discounted_Value = gross_Salary * ((irs_Percentage) / 100);
+            var social_Security_Value = gross_Salary * (SocialSecurityDiscount / 100);
+            var salary_Model = new SalaryComponentModel()
+            {
+                Gross_Salary = Math.Round(gross_Salary, 2),
+                Irs_Discount = (int)irs_Discounted_Value,
+                Irs_Discount_Percentage = irs_Percentage.Value,
+                Ss_Discount = Math.Round(social_Security_Value,2),
+                Ss_Discount_Percentage = SocialSecurityDiscount,
+                Help_Allowance = Math.Round(help_allowance, 2),
+                Food_Allowance = Math.Round(food_Allowance * 22, 2)
+            };
+            var win = new ResultWindow(salary_Model);
             win.Show();
         }
     }
