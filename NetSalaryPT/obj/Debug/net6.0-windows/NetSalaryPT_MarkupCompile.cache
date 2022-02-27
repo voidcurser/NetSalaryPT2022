@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Giovanny\source\repos\NetSalaryPT\NetSalaryPT\App.xaml
-21798330669
+6-1249265822
 
-7-999836554
+141653629250
 1941905061893
-MainWindow.xaml;ResultWindow.xaml;
+MainWindow.xaml;MVVM\View\GrossSalaryCalculationView.xaml;MVVM\View\NetSalaryCalculationView.xaml;ResultWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
 False
 
